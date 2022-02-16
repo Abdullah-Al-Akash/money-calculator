@@ -1,5 +1,6 @@
 * {
         /* font-family: 'Roboto', sans-serif !important; */
+        /* background-color: black; */
 }
 
 /* Brand Color: */
@@ -9,4 +10,8 @@
 
 #calculate-btn {
         background-color: purple;
+}
+
+.calculation-part {
+        background-color: rgb(247, 216, 247);
 }

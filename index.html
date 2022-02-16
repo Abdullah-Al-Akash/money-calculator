@@ -19,15 +19,18 @@
 </head>
 
 <body>
-        <h2 class="brand-color">Hello Money Calculator</h2>
+        <h1 class="brand-color fw-bold text-center mt-5 mb-5">Money Calculator</h1>
 
         <section class="container">
                 <div class="row">
+                        <!-- Banner Image -->
                         <div class="col-md-6">
-                                <img class="img-fluid" src="images/banner-main.jpg" alt="">
+                                <div class="p-3 d-flex justify-content-center align-items-center h-100">
+                                        <img class="img-fluid" src="images/banner-main.jpg" alt="">
+                                </div>
                         </div>
-                        <div class="col-md-6 calculation-part">
-
+                        <!-- Calculation Part -->
+                        <div class="col-md-6 calculation-part p-5">
                                 <div class="d-flex justify-content-center">
                                         <div>
                                                 <h3 class="text-center fw-bold brand-color m-4">Income</h3>
@@ -52,10 +55,36 @@
                                                         <button id="calculate-btn"
                                                                 class="btn fs-4 fw-bold text-white">Calculate</button>
                                                 </div>
+                                                <h3 class="fw-bold text-center mt-3">Total Expenses: 00<span
+                                                                id="expenses"></span></h3>
+                                                <h3 class="fw-bold text-center mt-3">Balance: 00<span
+                                                                id="expenses"></span></h3>
+                                                <div class="d-flex justify-content-center">
+                                                        <div class="row mt-5">
+                                                                <div class="col-2">
+                                                                        <h3 class="mt-1 w-25 text-end">Save:</h3>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                        <input class="form-control mt-1">
+                                                                </div>
+                                                                <div class="col-1">
+                                                                        <span class="fs-3">%</span>
+                                                                </div>
+                                                                <div class="col-5">
+                                                                        <button id="calculate-btn"
+                                                                                class="btn fs-4 fw-bold text-white ps-5 pe-5">Save</button>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <h3 class="fw-bold text-center mt-5">Saving Amount: 00<span
+                                                                id="expenses"></span></h3>
+                                                <h3 class="fw-bold text-center mt-3">Remaining Balance: 00<span
+                                                                id="expenses"></span></h3>
                                         </div>
                                 </div>
-
                         </div>
+
+                </div>
                 </div>
         </section>
 
