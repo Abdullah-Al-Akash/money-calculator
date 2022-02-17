@@ -31,3 +31,9 @@ body {
         border-radius: 10px;
         box-shadow: 2px 2px 20px rgb(248, 213, 213);
 }
+
+/* Error Message */
+.error {
+        padding-left: 19%;
+        color: red;
+}

@@ -35,26 +35,42 @@
                                 <div class="d-flex justify-content-center">
                                         <div>
                                                 <h3 class="text-center fw-bold brand-color m-4">Income</h3>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group">
                                                         <h5 class="mt-1 text-end w-25">Income:</h5>
                                                         <input id="income" class="ms-3 form-control"
                                                                 placeholder="Your Total Income">
                                                 </div>
+                                                <!-- Error Message -->
+                                                <div class="m-0 ms-5 error">
+                                                        <p id="income-error" class=""></p>
+                                                </div>
                                                 <h3 class="text-center fw-bold brand-color m-4">Expenses</h3>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group">
                                                         <h5 class="mt-1 w-25 text-end">Food:</h5>
                                                         <input id="food" class="ms-3 form-control"
                                                                 placeholder="Food Cost">
                                                 </div>
-                                                <div class="input-group mb-3">
+                                                <!-- Error Message -->
+                                                <div class="m-0 ms-5 error mb-3">
+                                                        <p id="food-error" class=""></p>
+                                                </div>
+                                                <div class="input-group">
                                                         <h5 class="mt-1 w-25 text-end">Rent:</h5>
                                                         <input id="rent" class="ms-3 form-control"
                                                                 placeholder="Rent Cost">
                                                 </div>
-                                                <div class="input-group mb-3">
+                                                <!-- Error Message -->
+                                                <div class="m-0 ms-5 error mb-3">
+                                                        <p id="rent-error" class=""></p>
+                                                </div>
+                                                <div class="input-group">
                                                         <h5 class="mt-1 w-25 text-end">Clothes:</h5>
                                                         <input id="clothes" class="ms-3 form-control"
                                                                 placeholder="Clothes Cost">
+                                                </div>
+                                                <!-- Error Message -->
+                                                <div class="m-0 ms-5 error mb-3">
+                                                        <p id="clothes-error" class=""></p>
                                                 </div>
                                                 <div class="d-grid gap-2 p-2">
                                                         <button id="calculate-btn"

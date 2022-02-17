@@ -1,14 +1,26 @@
+const incomeError = document.getElementById('income-error');
+const foodError = document.getElementById('food-error');
+const rentError = document.getElementById('rent-error');
+const clothesError = document.getElementById('clothes-error');
 // Calculate Total Cost:
 document.getElementById('calculate-btn').addEventListener('click', function () {
         // Call totalIncome Function to get Total Income:
         const totalIncome = getIncome();
-
+        // Handle Input Error:
+        if (totalIncome < 0 || isNaN(totalIncome)) {
+                incomeError.innerText = 'Income should be positive number!';
+                return;
+        }
         // Call getTotalExpenses Function to get Total Expenses:
         const totalExpenses = getTotalExpenses();
-
+        console.log(typeof (totalExpenses));
+        if (typeof (totalExpenses) == 'undefined') {
+                return;
+        }
         // Update Balance:
         const updateBalance = totalIncome - totalExpenses;
         document.getElementById('balance').innerText = updateBalance;
+        incomeError.innerText = '';
 })
 
 // Get Total Income:
@@ -30,6 +42,26 @@ function getTotalExpenses() {
         const clothesInput = document.getElementById('clothes').value;
         const clothes = parseFloat(clothesInput);
 
+        // Handle Error:
+        if (food < 0 || isNaN(food)) {
+                foodError.innerText = 'Food should be positive number!';
+                return;
+        }
+        else if (rent < 0 || isNaN(rent)) {
+                foodError.innerText = '';
+                const rentError = document.getElementById('rent-error');
+                rentError.innerText = 'Rent should be positive number!';
+                return;
+        }
+        else if (clothes < 0 || isNaN(clothes)) {
+                foodError.innerText = '';
+                rentError.innerText = '';
+                clothesError.innerText = 'Clothes should be positive number!';
+                return;
+        }
+        rentError.innerText = '';
+        clothesError.innerText = '';
+
         // Added All Expenses:
         const totalExpenses = food + rent + clothes;
 
@@ -47,7 +79,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
         const save = parseFloat(saveInput);
 
         // Calculate Saving:
-        const savingAmount = (totalIncome * save) / 100;
+        const savingAmount = (parseFloat(totalIncome) * save) / 100;
         document.getElementById('saving-amount').innerText = savingAmount;
 
         // Remaining Balance:
