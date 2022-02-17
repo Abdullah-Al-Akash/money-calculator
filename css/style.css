@@ -3,6 +3,20 @@
         /* background-color: black; */
 }
 
+/* Background Content */
+body {
+        background: linear-gradient(rgba(32, 32, 30, 0.89), rgba(65, 63, 63, 0.7)), url(../images/banner-main.jpg);
+        background-origin: content-box;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+.headline {
+        color: rgb(253, 143, 229);
+}
+
 /* Brand Color: */
 .brand-color {
         color: purple;
@@ -14,4 +28,6 @@
 
 .calculation-part {
         background-color: rgb(247, 216, 247);
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px rgb(248, 213, 213);
 }

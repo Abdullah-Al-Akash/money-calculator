@@ -19,14 +19,15 @@
 </head>
 
 <body>
-        <h1 class="brand-color fw-bold text-center mt-5 mb-5">Money Calculator</h1>
+        <h1 class="headline fw-bold text-center mt-5 mb-5">Money Calculator</h1>
 
         <section class="container">
                 <div class="row pb-5">
                         <!-- Banner Image -->
                         <div class="col-md-6">
                                 <div class="p-3 d-flex justify-content-center align-items-center h-100">
-                                        <img class="img-fluid" src="images/banner-main.jpg" alt="">
+                                        <img class="img-fluid rounded-3 border border-dark" src="images/banner-main.jpg"
+                                                alt="">
                                 </div>
                         </div>
                         <!-- Calculation Part -->
@@ -36,20 +37,24 @@
                                                 <h3 class="text-center fw-bold brand-color m-4">Income</h3>
                                                 <div class="input-group mb-3">
                                                         <h5 class="mt-1 text-end w-25">Income:</h5>
-                                                        <input id="income" class="ms-3 form-control">
+                                                        <input id="income" class="ms-3 form-control"
+                                                                placeholder="Your Total Income">
                                                 </div>
                                                 <h3 class="text-center fw-bold brand-color m-4">Expenses</h3>
                                                 <div class="input-group mb-3">
                                                         <h5 class="mt-1 w-25 text-end">Food:</h5>
-                                                        <input id="food" class="ms-3 form-control">
+                                                        <input id="food" class="ms-3 form-control"
+                                                                placeholder="Food Cost">
                                                 </div>
                                                 <div class="input-group mb-3">
                                                         <h5 class="mt-1 w-25 text-end">Rent:</h5>
-                                                        <input id="rent" class="ms-3 form-control">
+                                                        <input id="rent" class="ms-3 form-control"
+                                                                placeholder="Rent Cost">
                                                 </div>
                                                 <div class="input-group mb-3">
                                                         <h5 class="mt-1 w-25 text-end">Clothes:</h5>
-                                                        <input id="clothes" class="ms-3 form-control">
+                                                        <input id="clothes" class="ms-3 form-control"
+                                                                placeholder="Clothes Cost">
                                                 </div>
                                                 <div class="d-grid gap-2 p-2">
                                                         <button id="calculate-btn"
@@ -65,8 +70,8 @@
                                                                         <h3 class="mt-1 w-25 text-end">Save:</h3>
                                                                 </div>
                                                                 <div class="col-4">
-                                                                        <input id="save-input"
-                                                                                class="form-control mt-1">
+                                                                        <input id="save-input" class="form-control mt-1"
+                                                                                placeholder="Saving Percentage">
                                                                 </div>
                                                                 <div class="col-1">
                                                                         <span class="fs-3">%</span>
@@ -79,8 +84,8 @@
                                                 </div>
                                                 <h3 class="fw-bold text-center mt-5">Saving Amount: <span
                                                                 id="saving-amount">00</span></h3>
-                                                <h3 class="fw-bold text-center mt-3">Remaining Balance: 00<span
-                                                                id="expenses"></span></h3>
+                                                <h3 class="fw-bold text-center mt-3">Remaining Balance: <span
+                                                                id="remaining">00</span></h3>
                                         </div>
                                 </div>
                         </div>

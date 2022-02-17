@@ -9,7 +9,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         // Update Balance:
         const updateBalance = totalIncome - totalExpenses;
         document.getElementById('balance').innerText = updateBalance;
-
 })
 
 // Get Total Income:
@@ -50,4 +49,10 @@ document.getElementById('save-btn').addEventListener('click', function () {
         // Calculate Saving:
         const savingAmount = (totalIncome * save) / 100;
         document.getElementById('saving-amount').innerText = savingAmount;
+
+        // Remaining Balance:
+        const balanceValue = document.getElementById('balance').innerText;
+        const balance = parseFloat(balanceValue);
+        document.getElementById('remaining').innerText = balance - savingAmount;
+        console.log(balance);
 })
