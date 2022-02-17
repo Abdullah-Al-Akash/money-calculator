@@ -38,3 +38,16 @@ function getTotalExpenses() {
         document.getElementById('expenses').innerText = totalExpenses;
         return totalExpenses;
 }
+
+// Saving Amount:
+document.getElementById('save-btn').addEventListener('click', function () {
+        // Call getIncome Function to Get Total Income:
+        const totalIncome = getIncome();
+
+        const saveInput = document.getElementById('save-input').value;
+        const save = parseFloat(saveInput);
+
+        // Calculate Saving:
+        const savingAmount = (totalIncome * save) / 100;
+        document.getElementById('saving-amount').innerText = savingAmount;
+})
