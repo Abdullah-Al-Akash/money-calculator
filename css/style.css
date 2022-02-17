@@ -1,10 +1,6 @@
-* {
-        /* font-family: 'Roboto', sans-serif !important; */
-        /* background-color: black; */
-}
-
 /* Background Content */
 body {
+        font-family: 'Roboto', sans-serif;
         background: linear-gradient(rgba(32, 32, 30, 0.89), rgba(65, 63, 63, 0.7)), url(../images/banner-main.jpg);
         background-origin: content-box;
         background-attachment: fixed;
@@ -22,6 +18,7 @@ body {
         color: purple;
 }
 
+/* Brand Button */
 #calculate-btn, #save-btn {
         background-color: purple;
         color: white;
