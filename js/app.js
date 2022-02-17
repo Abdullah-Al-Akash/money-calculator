@@ -1,9 +1,15 @@
+// Catch All Initial Variable:
 const incomeError = document.getElementById('income-error');
 const foodError = document.getElementById('food-error');
 const rentError = document.getElementById('rent-error');
 const clothesError = document.getElementById('clothes-error');
+const expenseError = document.getElementById('expense-error');
+const savingError = document.getElementById('saving-error');
+
 // Calculate Total Cost:
 document.getElementById('calculate-btn').addEventListener('click', function () {
+        incomeError.innerText = '';
+        expenseError.innerText = '';
         // Call totalIncome Function to get Total Income:
         const totalIncome = getIncome();
         // Handle Input Error:
@@ -17,10 +23,15 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         if (typeof (totalExpenses) == 'undefined') {
                 return;
         }
+        if (totalExpenses > totalIncome) {
+                expenseError.innerText = 'Expense cannot be more than Income';
+                return;
+        }
         // Update Balance:
         const updateBalance = totalIncome - totalExpenses;
+        // Update Total Expenses Inner Text:
+        document.getElementById('expenses').innerText = totalExpenses;
         document.getElementById('balance').innerText = updateBalance;
-        incomeError.innerText = '';
 })
 
 // Get Total Income:
@@ -64,27 +75,42 @@ function getTotalExpenses() {
 
         // Added All Expenses:
         const totalExpenses = food + rent + clothes;
-
-        // Update Total Expenses Inner Text:
-        document.getElementById('expenses').innerText = totalExpenses;
         return totalExpenses;
 }
 
 // Saving Amount:
 document.getElementById('save-btn').addEventListener('click', function () {
+        savingError.innerText = "";
         // Call getIncome Function to Get Total Income:
         const totalIncome = getIncome();
 
         const saveInput = document.getElementById('save-input').value;
+
         const save = parseFloat(saveInput);
+        if (isNaN(save) || save > 100 || save < 0) {
+                savingError.innerText = "Enter Positive Value less than 100!"
+                return;
+        }
+        const totalExpenses = getTotalExpenses();
+        if (isNaN(totalIncome) || typeof (totalExpenses) == 'undefined') {
+                savingError.innerText = "Please Provide Income and Expenses!"
+                return;
+        }
 
         // Calculate Saving:
         const savingAmount = (parseFloat(totalIncome) * save) / 100;
+        const balanceValue = document.getElementById('balance').innerText;
+        const balance = parseFloat(balanceValue);
+
+        if (savingAmount > balance) {
+                savingError.innerText = "Saving amount cannot be more the main balance!";
+                return;
+        }
+
+        // Saving Amount:
         document.getElementById('saving-amount').innerText = savingAmount;
 
         // Remaining Balance:
-        const balanceValue = document.getElementById('balance').innerText;
-        const balance = parseFloat(balanceValue);
         document.getElementById('remaining').innerText = balance - savingAmount;
         console.log(balance);
 })
